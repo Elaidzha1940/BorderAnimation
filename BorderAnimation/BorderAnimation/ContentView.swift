@@ -13,17 +13,25 @@ import SwiftUI
 
 struct ContentView: View {
     @State var rotation: CGFloat = 0.0
+    
     var body: some View {
         
-        ZStack {
+        VStack {
             
             RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .frame(width: 250, height: 450)
-                .foregroundColor(Color("col"))
-                .rotationEffect(.degrees(rotation))
+                .frame(width: 100, height: 250)
+                .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.8), Color.yellow.opacity(0.7)]), startPoint: .top, endPoint: .bottom))                .rotationEffect(.degrees(rotation))
+            
             RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .frame(width: 125, height: 460)
-                .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Color.gray, Color.yellow]), startPoint: .top, endPoint: .bottom))
+                .frame(width: 100, height: 250)
+                .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Color.yellow.opacity(0.7), Color.gray.opacity(0.8)]), startPoint: .top, endPoint: .bottom))
+                .rotationEffect(.degrees(rotation))
+            
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .frame(width: 100, height: 250)
+                .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.8), Color.yellow.opacity(0.7)]), startPoint: .top, endPoint: .bottom))
+                .rotationEffect(.degrees(rotation))
+            
             
         }
         .preferredColorScheme(.dark)
