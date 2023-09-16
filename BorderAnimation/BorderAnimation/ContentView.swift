@@ -20,7 +20,7 @@ struct ContentView: View {
             
             RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .frame(width: 260, height: 340)
-                .foregroundColor(Color("col"))
+                .foregroundColor(Color("col").opacity(0.9))
             
             RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .frame(width: 130, height: 500)
@@ -31,7 +31,9 @@ struct ContentView: View {
                     .stroke(lineWidth: 9)
                     .frame(width: 256, height: 336)
                 }
-         
+         Text("Visa")
+                .font(.system(size: 30, weight: .bold, design: .rounded))
+                .offset(x: 80, y: 120)
         }
         .preferredColorScheme(.dark)
         .onAppear {
