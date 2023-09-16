@@ -16,23 +16,17 @@ struct ContentView: View {
     
     var body: some View {
         
-        VStack {
+        ZStack {
             
             RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .frame(width: 100, height: 250)
-                .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.8), Color.yellow.opacity(0.7)]), startPoint: .top, endPoint: .bottom))                .rotationEffect(.degrees(rotation))
+                .frame(width: 260, height: 440)
+                .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.8), Color.yellow.opacity(0.7)]), startPoint: .top, endPoint: .bottom))                
             
             RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .frame(width: 100, height: 250)
+                .frame(width: 130, height: 450)
                 .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Color.yellow.opacity(0.7), Color.gray.opacity(0.8)]), startPoint: .top, endPoint: .bottom))
                 .rotationEffect(.degrees(rotation))
-            
-            RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .frame(width: 100, height: 250)
-                .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.8), Color.yellow.opacity(0.7)]), startPoint: .top, endPoint: .bottom))
-                .rotationEffect(.degrees(rotation))
-            
-            
+         
         }
         .preferredColorScheme(.dark)
         .onAppear {
