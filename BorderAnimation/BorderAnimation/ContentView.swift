@@ -19,7 +19,7 @@ struct ContentView: View {
         ZStack {
             
             RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .frame(width: 260, height: 440)
+                .frame(width: 260, height: 340)
                 .foregroundColor(Color("col"))
             
             RoundedRectangle(cornerRadius: 20, style: .continuous)
@@ -28,6 +28,7 @@ struct ContentView: View {
                 .rotationEffect(.degrees(rotation))
                 .mask {
                     RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .stroke(lineWidth: 9)
                     .frame(width: 256, height: 336)
                 }
          
